@@ -1,13 +1,13 @@
-#mencetak deret fiboncci hingga #fibonacci adalah penjumlahan 2 bilangan sebelumnya
 def fibonacci(n):
-    a, b =0, 1
+    a, b = 0, 1
     hasil = []
-    while a <= n:  #while: Kata kunci yang menandai awal dari loop.
+    while a <= n:  # Loop terus berulang selama nilai a masih lebih kecil atau sama dengan n
         hasil.append(a)
-        a, b =b, a + b
+        a, b = b, a + b  # Perbarui nilai a dan b untuk iterasi berikutnya
     return hasil
-#input nilai n dari pengguna
-n = int(input ("masukan nilai n; "))
 
-#memanggil fungsi fibonacci dab mencetak hasilnya
-print(f"deret fibonacci sampai {n}: {fibonacci(n)}")
+# Input nilai n dari pengguna
+n = int(input("Masukkan nilai maksimum n untuk deret Fibonacci: "))
+
+# Memanggil fungsi fibonacci dan mencetak hasilnya
+print(f"Deret Fibonacci sampai {n}: {fibonacci(n)}")

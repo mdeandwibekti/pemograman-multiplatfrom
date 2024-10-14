@@ -1,31 +1,13 @@
-# Program to evaluate student performance based on percentage
-def evaluate_performance(percentage):
-    if percentage >= 90:
-        print ("Excellent performance")
-    elif percentage >= 80:
-        print ("Very Good performance")
-    elif percentage >= 70:
-        print ("Good performance")
-    elif percentage >= 60:
-        print ("Average performance")
-    else:
-        print ("Below average performance")
+def fibonacci(n):
+    a, b = 0, 1
+    hasil = []
+    while a <= n:  # Loop terus berulang selama nilai a masih lebih kecil atau sama dengan n
+        hasil.append(a)
+        a, b = b, a + b  # Perbarui nilai a dan b untuk iterasi berikutnya
+    return hasil
 
-# Example usage
-percentage = float(input("Enter the percentage: "))
-print(evaluate_performance(percentage))
+# Input nilai n dari pengguna
+n = int(input("Masukkan nilai maksimum n untuk deret Fibonacci: "))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Memanggil fungsi fibonacci dan mencetak hasilnya
+print(f"Deret Fibonacci sampai {n}: {fibonacci(n)}")
