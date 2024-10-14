@@ -1,13 +1,16 @@
-def fibonacci(n):
-    a, b = 0, 1
-    hasil = []
-    while a <= n:  # Loop terus berulang selama nilai a masih lebih kecil atau sama dengan n
-        hasil.append(a)
-        a, b = b, a + b  # Perbarui nilai a dan b untuk iterasi berikutnya
-    return hasil
+# Program to evaluate student performance based on percentage
+def evaluate_performance(percentage):
+    if percentage >= 90:
+        return "Excellent performance"
+    elif percentage >= 80:
+        return "Very Good performance"
+    elif percentage >= 70:
+        return "Good performance"
+    elif percentage >= 60:
+        return "Average performance"
+    else:
+        return "Below average performance"
 
-# Input nilai n dari pengguna
-n = int(input("Masukkan nilai maksimum n untuk deret Fibonacci: "))
-
-# Memanggil fungsi fibonacci dan mencetak hasilnya
-print(f"Deret Fibonacci sampai {n}: {fibonacci(n)}")
+# Example usage
+percentage = float(input("Enter the percentage: "))
+print(evaluate_performance(percentage))
